@@ -1,0 +1,12 @@
+<launch>
+
+  <!-- Load example URDF -->
+
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find mfbot_description)/urdf/mfbot.xacro'" />
+
+    
+  <!-- Show in Rviz  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find mfbot_description)/launch/mfbot.rviz"/>
+
+</launch>
+
